@@ -1,4 +1,4 @@
-<h1 align="center"><strong>Wesite Skillfull</strong> </h1>
+<h1 align="center"><strong>Website Skillfull</strong> </h1>
 
 This Repository containing Skillfull website project. For database major last project.
 

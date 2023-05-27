@@ -1,0 +1,42 @@
+* {
+  color :antiquewhite;
+}
+
+body {
+  height: 100vh;
+  background-color: #1a1a1a;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.login-wrapper {
+  margin: auto;
+  width: 600px;
+  border-radius: 15px;
+  padding: 20px 20px;
+  background-color: #333;
+  box-shadow: 0 0 40px rgba(255,255,255, 40%);
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input {
+  color : white !important;
+  background-color: #1a1a1a !important;
+}
+
+.btn-login {
+  margin-top: 10px;
+}
+
+@media (min-width: 992px) {
+  .login-wrapper {
+    padding: 20px 50px;
+  }
+}

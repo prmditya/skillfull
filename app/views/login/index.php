@@ -5,7 +5,7 @@
     <form>
       <div class="mb-3">
         <label for="InputNIM" class="input-nim">NIM</label>
-        <input type="nim" class="form-control" id="InputNIM">
+        <input type="number" class="form-control" id="InputNIM">
       </div>
       <div class="mb-3">
         <label for="InputPassword" class="input-password">Password</label>

@@ -31,10 +31,6 @@ input {
   background-color: #1a1a1a !important;
 }
 
-.btn-login {
-  margin-top: 10px;
-}
-
 @media (min-width: 992px) {
   .login-wrapper {
     padding: 20px 50px;

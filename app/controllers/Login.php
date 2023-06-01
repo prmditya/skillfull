@@ -7,6 +7,6 @@ class Login extends Controller
     $data['title'] = 'Login Page';
     $this->view('templates/header', $data);
     $this->view('login/index');
-    $this->view('templates/footer');
+    $this->view('templates/script');
   }
 }

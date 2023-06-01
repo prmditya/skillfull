@@ -1,38 +1,162 @@
+/* General Settings */
 * {
-  color :antiquewhite;
+  color: white;
+}
+
+h5 {
+  color: white !important;
 }
 
 body {
-  height: 100vh;
   background-color: #1a1a1a;
+  background-image: url("http://localhost/skillfull/public/img/login_background.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
-.container {
-  height: 100vh;
+/* Login and Register */
+
+.container-login {
+  height: 100%;
   display: flex;
   align-items: center;
 }
 
-.login-wrapper {
-  margin: auto;
-  width: 600px;
-  border-radius: 15px;
-  padding: 20px 20px;
-  background-color: #333;
-  box-shadow: 0 0 40px rgba(255,255,255, 40%);
+.container-login {
+  position: relative;
 }
 
-label {
-  margin-bottom: 5px;
+.container-login .login-wrapper {
+  position: relative;
+  overflow: hidden;
 }
+
+.container-login .login-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+.login-img-wrapper {
+  height: 225px;
+}
+
+.login-wrapper {
+  width: 499px;
+  border-radius: 20px;
+  padding: 30px 20px;
+  background-color: #333;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Navbar */
 
 input {
-  color : white !important;
+  color: white !important;
   background-color: #1a1a1a !important;
 }
 
+.input-group {
+  padding-top: 10px;
+}
+
+.btn-search {
+  border: 1px solid white;
+}
+
+.btn-search:hover {
+  border: 1px solid white;
+  background-color: #4b4b4b;
+}
+
+.btn-nav-icon {
+  font-size: 1.5rem;
+}
+
+/* Home  */
+/* Carousel */
+
+.home-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1a1a1a;
+  z-index: -1;
+}
+
+.custom-carousel {
+  border-radius: 10px;
+  height: 150px;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.carousel-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8),
+    rgba(255, 255, 255, 0)
+  );
+  z-index: 1;
+}
+
+.custom-carousel .carousel-inner {
+  height: 100%;
+}
+
+.custom-carousel .carousel-item {
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  z-index: 2;
+}
+
+/* Card */
+
+.card,
+.card img {
+  width: 22rem;
+}
+
+.card {
+  border-radius: 20px;
+}
+
+.card img {
+  border-radius: 20px 20px 0 0;
+}
+
+/* For Desktop Only */
 @media (min-width: 992px) {
   .login-wrapper {
-    padding: 20px 50px;
+    padding: 30px 50px;
+  }
+
+  .input-group {
+    padding-top: 0px;
+  }
+
+  .custom-carousel {
+    border-radius: 20px;
+    height: 400px;
+    max-height: 100vh;
+    overflow: hidden;
+  }
+
+  .card,
+  .card img {
+    width: 19rem;
   }
 }

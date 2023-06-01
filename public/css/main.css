@@ -1,14 +1,29 @@
-/* General Settings */
-* {
-  color: white;
+:root {
+  --primary-color: #1a1a1a;
+  --accent-color: #063757;
+  --text-color: #eff4df;
 }
 
+/* General Settings */
+* {
+  color: var(--text-color);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
 h5 {
-  color: white !important;
+  color: var(--text-color) !important;
+}
+
+button {
+  cursor: pointer;
 }
 
 body {
-  background-color: #1a1a1a;
+  background-color: var(--primary-color);
   background-image: url("http://localhost/skillfull/public/img/login_background.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
@@ -16,6 +31,13 @@ body {
 }
 
 /* Login and Register */
+
+.form-control {
+  border-radius: 5px;
+  color: var(--text-color) !important;
+  background-color: var(--primary-color) !important;
+  border: none;
+}
 
 .container-login {
   height: 100%;
@@ -48,27 +70,32 @@ body {
   width: 499px;
   border-radius: 20px;
   padding: 30px 20px;
-  background-color: #333;
+  background-color: var(--accent-color);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 /* Navbar */
 
-input {
-  color: white !important;
-  background-color: #1a1a1a !important;
-}
-
 .input-group {
-  padding-top: 10px;
+  margin-top: 10px;
+  border: 1px solid var(--text-color);
+  border-radius: 10px;
 }
 
-.btn-search {
-  border: 1px solid white;
+.input-group input {
+  border-radius: 10px 0 0 10px;
+  color: var(--text-color) !important;
+  background-color: var(--primary-color) !important;
+  border: none;
+}
+
+.input-group input:focus {
+  box-shadow: none;
+  border: none;
 }
 
 .btn-search:hover {
-  border: 1px solid white;
+  border: 1px solid var(--text-color);
   background-color: #4b4b4b;
 }
 
@@ -85,7 +112,7 @@ input {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #1a1a1a;
+  background-color: var(--primary-color);
   z-index: -1;
 }
 
@@ -145,7 +172,7 @@ input {
   }
 
   .input-group {
-    padding-top: 0px;
+    margin-top: 0px;
   }
 
   .custom-carousel {

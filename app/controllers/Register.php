@@ -13,10 +13,12 @@ class Register extends Controller
   public function registerUser()
   {
     if ($this->model('User_model')->addUser($_POST) > 0) {
+      Flasher::setFlash('<strong>successfull</strong> log-in to continue', 'Register', 'success');
       header('Location:' . BASE_URL . '/login');
       exit;
     } else {
-      echo "<script> alert('Sign-Up Failed') </script>";
+      Flasher::setFlash('<strong>failed</strong>', 'Register', 'danger');
+      header('Location:' . BASE_URL . '/register');
     }
   }
 }

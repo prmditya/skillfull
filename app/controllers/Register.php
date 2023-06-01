@@ -4,6 +4,11 @@ class Register extends Controller
 {
   public function index()
   {
+    if (isset($_SESSION["login"])) {
+      header('Location:' . BASE_URL . '/home');
+      exit;
+    }
+
     $data['title'] = 'Register Page';
     $this->view('templates/header', $data);
     $this->view('register/index');

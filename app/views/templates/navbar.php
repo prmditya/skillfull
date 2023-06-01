@@ -17,8 +17,15 @@
         <button class="btn nav-item btn-nav-icon text-start">
           <i class="bi bi-plus-circle"></i><span class="create-btn"></span>
         </button>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="<?= BASE_URL; ?>/profile"><img class="rounded-circle" src="<?= BASE_URL; ?>/img/default_profile.jpg" width="40" /><span class="profile-name"></span></a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img class="rounded-circle" src="<?= BASE_URL; ?>/img/default_profile.jpg" width="40" />
+            <span class="profile-name"></span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="<?= BASE_URL; ?>/home/logout">Log-Out</a></li>
+          </ul>
         </li>
       </ul>
     </div>

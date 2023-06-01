@@ -7,15 +7,15 @@
 
     <?php Flasher::flash(); ?>
 
-    <form>
+    <form action="<?= BASE_URL; ?>/login/loginUser" method="post">
       <div class="my-3">
-        <input type="number" class="form-control" id="InputNIM" placeholder="NIM" />
+        <input type="number" class="form-control" id="InputNIM" placeholder="NIM" name="nim" />
       </div>
       <div class="mb-3">
-        <input type="password" class="form-control" id="InputPassword" placeholder="password" />
+        <input type="password" class="form-control" id="InputPassword" placeholder="password" name="password" />
       </div>
       <div class="d-grid">
-        <button type="submit" class="btn btn-primary btn-login btn-block">
+        <button type="submit" class="btn btn-primary btn-login btn-block" name="login">
           Login
         </button>
       </div>

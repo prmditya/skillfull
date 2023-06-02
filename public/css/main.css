@@ -5,9 +5,10 @@
 
 :root {
   --primary-color: #121212;
-  --secondary-color: #063757;
-  --accent-color: #076cb0;
-  --text-color: #eff4df;
+  --secondary-color: #36393f;
+  --btn-primary-color: #294394;
+  --accent-color: #605f91;
+  --text-color: #fbfbf9;
 }
 
 /* General Settings */
@@ -24,17 +25,31 @@ h5 {
   color: var(--text-color) !important;
 }
 
-button {
-  cursor: pointer;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--primary-color);
-  background-image: url("http://localhost/skillfull/public/img/login_background.jpg");
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
+}
+
+button {
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--btn-primary-color);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--btn-primary-color);
+  filter: brightness(110%);
+  transition: 0.3s;
 }
 
 /* Login and Register */
@@ -44,7 +59,7 @@ body {
   width: 499px;
   border-radius: 20px;
   padding: 30px 50px;
-  background-color: var(--secondary-color);
+  background: var(--secondary-color);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
@@ -55,24 +70,16 @@ body {
   align-items: center;
 }
 
-.container-login .login-wrapper,
-.container-register .register-wrapper {
-  position: relative;
-  overflow: hidden;
-}
-
-.container-login .login-wrapper img,
-.container-register .register-wrapper img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-  object-position: center;
-}
-
 .login-img-wrapper,
 .register-img-wrapper {
-  height: 225px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-img-wrapper img,
+.register-img-wrapper img {
+  max-width: 200px;
 }
 
 .form-control {
@@ -85,8 +92,7 @@ body {
 /* Navbar */
 
 .navbar {
-  background: linear-gradient(90deg, rgb(18, 18, 18) 0%, rgb(6, 54, 86) 100%);
-  border-bottom: 2px solid #076cb0;
+  background: rgba(54, 57, 63, 0.7) !important;
 }
 
 .input-group {
@@ -97,7 +103,7 @@ body {
 }
 
 .input-group input {
-  background-color: rgba(6, 54, 86, 0.3) !important;
+  background-color: rgba(54, 57, 63, 0.7) !important;
   border-radius: 10px 0 0 10px;
   border: none;
 }
@@ -109,12 +115,14 @@ body {
 
 .btn-search {
   border: none;
-  background-color: rgba(6, 54, 86, 0.3) !important;
+  background-color: rgba(54, 57, 63, 0.7) !important;
   border-radius: 0 10px 10px 0;
 }
 
 .btn-search:hover {
-  background-color: #4b4b4b !important;
+  background-color: rgba(54, 57, 63, 0.7) !important;
+  filter: brightness(150%);
+  transition: 0.3s;
 }
 
 .btn-nav-icon {
@@ -123,8 +131,6 @@ body {
 
 /* Navbar Dropdown */
 .dropdown-menu {
-  border-width: 3px;
-  border-color: var(--accent-color);
   background-color: var(--secondary-color);
 }
 
@@ -149,7 +155,7 @@ body {
   height: 375px;
   max-height: 100vh;
   overflow: hidden;
-  box-shadow: 0 0 20px 5px rgba(6, 55, 87, 40%);
+  box-shadow: 0 0 20px 5px rgba(41, 67, 148, 0.4);
 }
 
 .carousel-image-overlay {
@@ -181,12 +187,16 @@ body {
 
 /* Card */
 .card {
+  background-color: var(--secondary-color) !important;
   border-radius: 20px;
-  box-shadow: 0 0 20px 5px rgba(6, 55, 87, 40%);
 }
 
-.card,
-.card img {
+.card:hover {
+  box-shadow: 0 0 20px 5px rgba(41, 67, 148, 0.4);
+  transition: 0.3s;
+}
+
+.card {
   width: 19rem;
 }
 
@@ -217,6 +227,11 @@ body {
   .custom-carousel {
     height: 200px;
   }
+
+  .container-login .login-wrapper img,
+  .container-register .register-wrapper img {
+    width: 450px;
+  }
 }
 
 /* For Phone Small Only */
@@ -226,8 +241,11 @@ body {
     padding: 30px 20px;
   }
 
-  .card,
-  .card img {
+  form p {
+    font-size: small;
+  }
+
+  .card {
     width: 18rem;
   }
 

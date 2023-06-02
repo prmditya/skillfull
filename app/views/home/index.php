@@ -67,9 +67,9 @@
         <div class="card bg-dark mb-3 mx-auto">
           <img src="<?= BASE_URL; ?>/img/placeholder.jpg" class="card-img-top" alt="..." />
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+            <h5 class="card-title">Title Karya</h5>
             <p class="card-text">Some quick example text to ...</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a href="#" class="btn btn-primary">Go to Page</a>
           </div>
         </div>
       </div>

@@ -245,7 +245,8 @@ button {
     font-size: small;
   }
 
-  .card {
+  .card,
+  .card img {
     width: 18rem;
   }
 

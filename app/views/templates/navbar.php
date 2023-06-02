@@ -24,6 +24,9 @@
           </a>
           <ul class="dropdown-menu dropdown-menu-dark">
             <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
             <li><a class="dropdown-item" href="<?= BASE_URL; ?>/home/logout">Log-Out</a></li>
           </ul>
         </li>

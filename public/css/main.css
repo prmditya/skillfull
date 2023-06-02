@@ -34,29 +34,30 @@ body {
 
 /* Login and Register */
 
-.form-control {
-  border-radius: 5px;
-  color: var(--text-color) !important;
-  background-color: var(--primary-color) !important;
-  border: none;
+.login-wrapper,
+.register-wrapper {
+  width: 499px;
+  border-radius: 20px;
+  padding: 30px 50px;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-.container-login {
+.container-login,
+.container-register {
   height: 100%;
   display: flex;
   align-items: center;
 }
 
-.container-login {
-  position: relative;
-}
-
-.container-login .login-wrapper {
+.container-login .login-wrapper,
+.container-register .register-wrapper {
   position: relative;
   overflow: hidden;
 }
 
-.container-login .login-wrapper img {
+.container-login .login-wrapper img,
+.container-register .register-wrapper img {
   position: absolute;
   top: 0;
   left: 0;
@@ -64,22 +65,22 @@ body {
   object-position: center;
 }
 
-.login-img-wrapper {
+.login-img-wrapper,
+.register-img-wrapper {
   height: 225px;
 }
 
-.login-wrapper {
-  width: 499px;
-  border-radius: 20px;
-  padding: 30px 20px;
-  background-color: var(--accent-color);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+.form-control {
+  border-radius: 5px;
+  color: var(--text-color) !important;
+  background-color: var(--primary-color) !important;
+  border: none;
 }
 
 /* Navbar */
 
 .input-group {
-  margin-top: 10px;
+  margin-top: 0px;
   border: 1px solid var(--text-color);
   border-radius: 10px;
 }
@@ -106,8 +107,6 @@ body {
 }
 
 /* Home  */
-/* Carousel */
-
 .home-overlay {
   position: fixed;
   top: 0;
@@ -118,9 +117,10 @@ body {
   z-index: -1;
 }
 
+/* Carousel */
 .custom-carousel {
   border-radius: 10px;
-  height: 150px;
+  height: 375px;
   max-height: 100vh;
   overflow: hidden;
 }
@@ -153,10 +153,9 @@ body {
 }
 
 /* Card */
-
 .card,
 .card img {
-  width: 18rem;
+  width: 19rem;
 }
 
 .card {
@@ -167,25 +166,48 @@ body {
   border-radius: 20px 20px 0 0;
 }
 
-/* For Desktop Only */
-@media (min-width: 992px) {
-  .login-wrapper {
-    padding: 30px 50px;
-  }
+/* Media Queries */
 
-  .input-group {
-    margin-top: 0px;
+/* For Laptop Only */
+@media (max-width: 1024px) {
+  .card,
+  .card img {
+    width: 14rem;
   }
 
   .custom-carousel {
-    border-radius: 20px;
-    height: 400px;
-    max-height: 100vh;
-    overflow: hidden;
+    height: 300px;
+  }
+}
+
+/* For Tablet Only */
+@media (max-width: 768px) {
+}
+
+/* For Phone Large Only */
+@media (max-width: 426px) {
+  .custom-carousel {
+    height: 200px;
+  }
+}
+
+/* For Phone Small Only */
+@media (max-width: 376px) {
+  .login-wrapper,
+  .register-wrapper {
+    padding: 30px 20px;
   }
 
   .card,
   .card img {
-    width: 19rem;
+    width: 18rem;
+  }
+
+  .input-group {
+    margin-top: 10px;
+  }
+
+  .custom-carousel {
+    height: 150px;
   }
 }

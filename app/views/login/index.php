@@ -3,7 +3,7 @@
 
     <!-- Login Image -->
     <div class="login-img-wrapper mb-3">
-      <img src="<?= BASE_URL; ?>/img/logo.png" alt="" />
+      <img src="<?= BASE_URL; ?>/img/logo.png"/>
     </div>
 
     <h1 class="mb-4 text-center" style="font-weight: bold;">Welcome Back</h1>
@@ -24,7 +24,7 @@
         </button>
       </div>
       <p class="mt-3 text-center">
-        Don't have any account? <a href="<?= BASE_URL; ?>/register"> Sign-Up </a>
+        Don't have any account? <a href="<?= BASE_URL; ?>/register">Sign-Up</a>
       </p>
     </form>
 

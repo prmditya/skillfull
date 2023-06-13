@@ -24,6 +24,7 @@ class Register extends Controller
     } else {
       Flasher::setFlash('<strong>failed</strong>', 'Register', 'danger');
       header('Location:' . BASE_URL . '/register');
+      exit;
     }
   }
 }

@@ -1,38 +1,347 @@
+/* Import */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/* Variables */
+
+:root {
+  --primary-color: #121212;
+  --secondary-color: #063757;
+  --accent-color: #076cb0;
+  --text-color: #eff4df;
+}
+
+/* General Settings */
 * {
-  color :antiquewhite;
+  color: var(--text-color);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--text-color) !important;
+}
+
+button {
+  cursor: pointer;
 }
 
 body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--primary-color);
+  background-image: url("http://localhost/skillfull/public/img/login_background.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   height: 100vh;
-  background-color: #1a1a1a;
 }
 
-.container {
-  height: 100vh;
+/* Login and Register */
+
+.login-wrapper,
+.register-wrapper {
+  width: 499px;
+  border-radius: 20px;
+  padding: 30px 50px;
+  background-color: var(--secondary-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.container-login,
+.container-register {
+  height: 100%;
   display: flex;
   align-items: center;
 }
 
-.login-wrapper {
-  margin: auto;
-  width: 600px;
-  border-radius: 15px;
-  padding: 20px 20px;
-  background-color: #333;
-  box-shadow: 0 0 40px rgba(255,255,255, 40%);
+.container-login .login-wrapper,
+.container-register .register-wrapper {
+  position: relative;
+  overflow: hidden;
 }
 
-label {
-  margin-bottom: 5px;
+.container-login .login-wrapper img,
+.container-register .register-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: center;
 }
 
-input {
-  color : white !important;
-  background-color: #1a1a1a !important;
+.login-img-wrapper,
+.register-img-wrapper {
+  height: 225px;
 }
 
-@media (min-width: 992px) {
-  .login-wrapper {
-    padding: 20px 50px;
+.form-control {
+  border-radius: 5px;
+  color: var(--text-color) !important;
+  background-color: var(--primary-color) !important;
+  border: none;
+}
+
+/* Navbar */
+
+.navbar {
+  background: linear-gradient(90deg, rgb(18, 18, 18) 0%, rgb(6, 54, 86) 100%);
+  border-bottom: 2px solid #076cb0;
+}
+
+.input-group {
+  margin-top: 0px;
+  border: 2px solid var(--text-color);
+  color: var(--text-color) !important;
+  border-radius: 10px;
+}
+
+.input-group input {
+  background-color: rgba(6, 54, 86, 0.3) !important;
+  border-radius: 10px 0 0 10px;
+  border: none;
+}
+
+.input-group input:focus {
+  box-shadow: none;
+  border: none;
+}
+
+.btn-icon {
+  width: 48px;
+  height: 48px;
+  display: block;
+  margin: auto auto;
+  color: var(--text-color);
+}
+
+.btn-search {
+  border: none;
+  background-color: rgba(6, 54, 86, 0.3) !important;
+  border-radius: 0 10px 10px 0;
+}
+
+.btn-search:hover {
+  background-color: #4b4b4b !important;
+}
+
+.btn-nav-icon {
+  font-size: 1.7rem;
+}
+
+/* Navbar Dropdown */
+.dropdown-menu {
+  border-width: 3px;
+  border-color: var(--accent-color);
+  background-color: var(--secondary-color);
+}
+
+.dropdown-divider {
+  background-color: var(--accent-color);
+}
+
+/* Home  */
+.home-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  z-index: -1;
+}
+
+/* Carousel */
+.custom-carousel {
+  border-radius: 10px;
+  height: 375px;
+  max-height: 100vh;
+  overflow: hidden;
+  box-shadow: 0 0 20px 5px rgba(6, 55, 87, 40%);
+}
+
+.carousel-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.8),
+      rgba(255, 255, 255, 0));
+  z-index: 1;
+}
+
+.custom-carousel .carousel-inner {
+  height: 100%;
+}
+
+.custom-carousel .carousel-item {
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  z-index: 2;
+}
+
+/* Card */
+.card {
+  border-radius: 20px;
+  box-shadow: 0 0 20px 5px rgba(6, 55, 87, 40%);
+}
+
+.card,
+.card img {
+  width: 19rem;
+}
+
+.card img {
+  border-radius: 20px 20px 0 0;
+}
+
+/* Profile */
+.profile-name {
+  font-weight: bold;
+}
+
+.profile-wrapper {
+  padding: 1rem 11rem;
+  padding-bottom: 3rem;
+  border-radius: 16px;
+  background-color: var(--primary-color);
+}
+
+.profile-head {
+  margin-bottom: 3rem;
+}
+
+img#profile_picture {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #076cb0;
+}
+
+.large-text {
+  font-size: 2rem;
+}
+
+.p-btn-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.p-btn {
+  width: 50%;
+  min-width: fit-content;
+  max-width: 320px;
+}
+
+.underline {
+  height: 3px;
+  background-color: #076cb0;
+}
+
+.project-text-underline {
+  width: 8em;
+}
+
+/* Product Page */
+.product-nav {
+  width: min-content;
+  margin-bottom: 2rem;
+}
+
+.product-page-wrapper {
+  border-radius: 2rem;
+  background-color: var(--primary-color);
+  padding: 4rem;
+  padding-top: 2rem;
+  margin: 2rem;
+  margin-bottom: 4rem;
+}
+
+.product-thumbnail img{
+  height: 256px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border-radius: 1rem;
+}
+
+.preview {
+  margin-top: 2rem;
+}
+
+.preview-item img {
+  height: 100px;
+  border-radius: 2%;
+}
+
+.reviews-wrapper {
+  margin-top: 1rem;
+  border-radius: 2rem;
+  padding: 1.25rem;
+  background-color: #252525;
+}
+
+.review-entry {
+  margin-bottom: 1.5rem;
+}
+
+.review-txt {
+  font-size: small;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+}
+
+/* Media Queries */
+/* For Laptop Only */
+@media (max-width: 1024px) {
+
+  .card,
+  .card img {
+    width: 14rem;
+  }
+
+  .custom-carousel {
+    height: 300px;
+  }
+}
+
+/* For Tablet Only */
+@media (max-width: 768px) {}
+
+/* For Phone Large Only */
+@media (max-width: 426px) {
+  .custom-carousel {
+    height: 200px;
+  }
+}
+
+/* For Phone Small Only */
+@media (max-width: 376px) {
+
+  .login-wrapper,
+  .register-wrapper {
+    padding: 30px 20px;
+  }
+
+  .card,
+  .card img {
+    width: 18rem;
+  }
+
+  .input-group {
+    margin-top: 10px;
+  }
+
+  .custom-carousel {
+    height: 150px;
   }
 }

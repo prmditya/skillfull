@@ -6,7 +6,7 @@ class Database
   private $username = DB_USERNAME;
   private $password = DB_PASSWORD;
   private $dbname = DB_NAME;
-  private $dbHandler;
+  public $dbHandler;
 
   public function __construct()
   {
@@ -15,8 +15,6 @@ class Database
 
   public function query($query)
   {
-    mysqli_query($this->dbHandler, $query);
-
-    return mysqli_affected_rows($this->dbHandler);
+    return mysqli_query($this->dbHandler, $query);
   }
 }

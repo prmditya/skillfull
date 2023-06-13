@@ -1,20 +1,32 @@
-<div class="container">
-  <div class="login-wrapper">
-    <h1>Login Page</h1>
+<div class="container container-login">
+  <div class="login-wrapper mx-auto">
 
-    <form>
-      <div class="mb-3">
-        <label for="InputNIM" class="input-nim">NIM</label>
-        <input type="number" class="form-control" id="InputNIM">
+    <!-- Login Image -->
+    <div class="login-img-wrapper">
+      <img src="<?= BASE_URL; ?>/img/login_wrapper_background.png" width="500" alt="" />
+    </div>
+
+    <h1 class="mb-4 text-center">Login Page</h1>
+
+    <?php Flasher::flash(); ?>
+
+    <!-- Form Input -->
+    <form action="<?= BASE_URL; ?>/login/loginUser" method="post">
+      <div class="my-3">
+        <input type="number" class="form-control" id="InputNIM" placeholder="NIM" name="nim" />
       </div>
       <div class="mb-3">
-        <label for="InputPassword" class="input-password">Password</label>
-        <input type="password" class="form-control" id="InputPassword">
+        <input type="password" class="form-control" id="InputPassword" placeholder="password" name="password" />
       </div>
-      <div class="mb-3">
-        <p>Don't have any account? <a href="<?= BASE_URL ?>/register"> Sign-Up </a></p>
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary btn-login btn-block" name="login">
+          Login
+        </button>
       </div>
-      <button type="submit" class="btn btn-primary btn-login">Login</button>
+      <p class="mt-3 text-center">
+        Don't have any account? <a href="<?= BASE_URL; ?>/register"> Sign-Up </a>
+      </p>
     </form>
+
   </div>
 </div>

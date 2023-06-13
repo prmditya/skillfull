@@ -1,6 +1,6 @@
 <h1 align="center"><strong>Website Skillfull</strong> </h1>
 
-This Repository contains Skillfull website project. This website is a final project for Applied Database subject.
+This Repository containing Skillfull website project. For database major last project.
 
 ## Tech Stack
 

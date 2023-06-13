@@ -1,6 +1,6 @@
 <?php
 
-class Login extends Controller
+class Product_upload extends Controller
 {
   public function index()
   {

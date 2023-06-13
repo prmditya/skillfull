@@ -1,4 +1,3 @@
-<div class="home-overlay"></div>
 <div class="container">
 
   <!-- Start Carousel -->
@@ -104,6 +103,7 @@
         </div>
       </div>
     </div>
+
   </section>
   <!-- End Karya Baru -->
 

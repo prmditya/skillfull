@@ -31,8 +31,8 @@ class User_model
 
     $password = password_hash($data['password'], PASSWORD_DEFAULT);
 
-    $query = "INSERT INTO user VALUES('', '$nim', '', '$nim', '$password', '')";
-    $this->db->query($query);
+    $statement = "INSERT INTO user VALUES('', '$nim', '', '$nim', '$password', '')";
+    $this->db->query($statement);
     $result = mysqli_affected_rows($this->db->dbHandler);
     return $result;
   }
@@ -42,16 +42,14 @@ class User_model
     $nim = $data['nim'];
     $password = trim($data['password']);
 
-    $query = "SELECT * FROM user WHERE user_nim = '$nim'";
-    $result = $this->db->query($query);
+    $statement = "SELECT * FROM user WHERE user_nim = '$nim'";
+    $result = $this->db->query($statement);
 
     if (mysqli_num_rows($result) > 0) {
       $row = mysqli_fetch_assoc($result);
       $isPassValid = password_verify($password, $row['password']);
-      var_dump($isPassValid);
       if ($isPassValid) return 1;
     }
-    echo "gagal";
     return 0;
   }
 }

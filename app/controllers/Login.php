@@ -24,6 +24,7 @@ class Login extends Controller
     } else {
       Flasher::setFlash('<strong>failed</strong>', 'Login', 'danger');
       header('Location:' . BASE_URL . '/login');
+      exit;
     }
   }
 }

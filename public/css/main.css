@@ -36,10 +36,8 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--primary-color);
-  background-image: url("http://localhost/skillfull/public/img/login_background.jpg");
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   height: 100vh;
 }
 
@@ -247,163 +245,6 @@ button {
   color: var(--text-color);
 }
 
-/* Media Queries */
-
-/* For Laptop Only */
-@media (max-width: 1024px) {
-  .card,
-  .card img {
-    width: 14rem;
-  }
-
-  .custom-carousel {
-    height: 300px;
-  }
-.container-login .login-wrapper,
-.container-register .register-wrapper {
-  position: relative;
-  overflow: hidden;
-}
-
-.container-login .login-wrapper img,
-.container-register .register-wrapper img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-  object-position: center;
-}
-
-.login-img-wrapper,
-.register-img-wrapper {
-  height: 225px;
-}
-
-.form-control {
-  border-radius: 5px;
-  color: var(--text-color) !important;
-  background-color: var(--primary-color) !important;
-  border: none;
-}
-
-/* Navbar */
-
-.navbar {
-  background: linear-gradient(90deg, rgb(18, 18, 18) 0%, rgb(6, 54, 86) 100%);
-  border-bottom: 2px solid #076cb0;
-}
-
-.input-group {
-  margin-top: 0px;
-  border: 2px solid var(--text-color);
-  color: var(--text-color) !important;
-  border-radius: 10px;
-}
-
-.input-group input {
-  background-color: rgba(6, 54, 86, 0.3) !important;
-  border-radius: 10px 0 0 10px;
-  border: none;
-}
-
-.input-group input:focus {
-  box-shadow: none;
-  border: none;
-}
-
-.btn-icon {
-  width: 48px;
-  height: 48px;
-  display: block;
-  margin: auto auto;
-  color: var(--text-color);
-}
-
-.btn-search {
-  border: none;
-  background-color: rgba(6, 54, 86, 0.3) !important;
-  border-radius: 0 10px 10px 0;
-}
-
-.btn-search:hover {
-  background-color: #4b4b4b !important;
-}
-
-.btn-nav-icon {
-  font-size: 1.7rem;
-}
-
-/* Navbar Dropdown */
-.dropdown-menu {
-  border-width: 3px;
-  border-color: var(--accent-color);
-  background-color: var(--secondary-color);
-}
-
-.dropdown-divider {
-  background-color: var(--accent-color);
-}
-
-/* Home  */
-.home-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--primary-color);
-  z-index: -1;
-}
-
-/* Carousel */
-.custom-carousel {
-  border-radius: 10px;
-  height: 375px;
-  max-height: 100vh;
-  overflow: hidden;
-  box-shadow: 0 0 20px 5px rgba(6, 55, 87, 40%);
-}
-
-.carousel-image-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to top,
-      rgba(0, 0, 0, 0.8),
-      rgba(255, 255, 255, 0));
-  z-index: 1;
-}
-
-.custom-carousel .carousel-inner {
-  height: 100%;
-}
-
-.custom-carousel .carousel-item {
-  height: 100%;
-  object-fit: cover;
-}
-
-.carousel-caption {
-  z-index: 2;
-}
-
-/* Card */
-.card {
-  border-radius: 20px;
-  box-shadow: 0 0 20px 5px rgba(6, 55, 87, 40%);
-}
-
-.card,
-.card img {
-  width: 19rem;
-}
-
-.card img {
-  border-radius: 20px 20px 0 0;
-}
-
 /* Profile */
 .profile-name {
   font-weight: bold;
@@ -504,9 +345,9 @@ img#profile_picture {
 }
 
 /* Media Queries */
+
 /* For Laptop Only */
 @media (max-width: 1024px) {
-
   .card,
   .card img {
     width: 14rem;
@@ -515,6 +356,8 @@ img#profile_picture {
   .custom-carousel {
     height: 300px;
   }
+}
+
 /* For Tablet Only */
 @media (max-width: 768px) {
 }

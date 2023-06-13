@@ -9,6 +9,11 @@ class Login extends Controller
       exit;
     }
 
+    if (isset($_SESSION["login"])) {
+      header('Location:' . BASE_URL . '/home');
+      exit;
+    }
+
     $data['title'] = 'Login Page';
     $this->view('templates/header', $data);
     $this->view('login/index');

@@ -2,11 +2,11 @@
   <div class="login-wrapper mx-auto">
 
     <!-- Login Image -->
-    <div class="login-img-wrapper">
-      <img src="<?= BASE_URL; ?>/img/login_wrapper_background.png" width="500" alt="" />
+    <div class="login-img-wrapper mb-3">
+      <img src="<?= BASE_URL; ?>/img/logo.png"/>
     </div>
 
-    <h1 class="mb-4 text-center">Login Page</h1>
+    <h1 class="mb-4 text-center" style="font-weight: bold;">Welcome Back</h1>
 
     <?php Flasher::flash(); ?>
 
@@ -24,7 +24,7 @@
         </button>
       </div>
       <p class="mt-3 text-center">
-        Don't have any account? <a href="<?= BASE_URL; ?>/register"> Sign-Up </a>
+        Don't have any account? <a href="<?= BASE_URL; ?>/register">Sign-Up</a>
       </p>
     </form>
 

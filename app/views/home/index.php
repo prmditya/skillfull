@@ -1,4 +1,3 @@
-<div class="home-overlay"></div>
 <div class="container">
 
   <!-- Start Carousel -->
@@ -11,7 +10,7 @@
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
 
-      <!-- Content -->
+      <!-- Carousel Content -->
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="carousel-image-overlay"></div>
@@ -67,9 +66,9 @@
         <div class="card bg-dark mb-3 mx-auto">
           <img src="<?= BASE_URL; ?>/img/placeholder.jpg" class="card-img-top" alt="..." />
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+            <h5 class="card-title">Title Karya</h5>
             <p class="card-text">Some quick example text to ...</p>
-            <a href="<?= BASE_URL; ?>/product" class="btn btn-primary">Go somewhere</a>
+            <a href="#" class="btn btn-primary">Go to Page</a>
           </div>
         </div>
       </div>
@@ -104,6 +103,7 @@
         </div>
       </div>
     </div>
+
   </section>
   <!-- End Karya Baru -->
 

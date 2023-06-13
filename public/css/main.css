@@ -303,7 +303,7 @@ img#profile_picture {
 
 .product-page-wrapper {
   border-radius: 2rem;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   padding: 4rem;
   padding-top: 2rem;
   margin: 2rem;
@@ -342,6 +342,63 @@ img#profile_picture {
   font-size: small;
   padding-left: 1rem;
   padding-top: 0.5rem;
+}
+
+.rating {
+  margin-top: 1rem;
+  width: fit-content;
+  border-radius: .5rem;
+  /* background-color: var(--btn-primary-color); */
+}
+
+.rating * {
+  margin-right: .35rem;
+}
+
+.rating p {
+  display: inline;
+}
+
+.bi-star-fill,
+.bi-star-half {
+  color: gold;
+  margin: 0;
+}
+
+.tags,
+.rating,
+.download-btn {
+  padding: .5rem 1rem;
+}
+
+.tag {
+  padding: .35rem .75rem;
+  border-radius: .5rem;
+  background-color: var(--accent-color);
+}
+
+.inline {
+  display: inline;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.top-margin-sm {
+  margin-top: 1.5rem;
+}
+
+.top-margin-md {
+  margin-top: 2.5rem;
+}
+
+.top-margin-lg {
+  margin-top: 3.5rem;
 }
 
 /* Media Queries */

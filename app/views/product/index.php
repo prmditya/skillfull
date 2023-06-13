@@ -16,7 +16,6 @@
                 </div>
                 <div class="owl-carousel owl-theme preview">
                     <div class="preview-item">
-                      
                     <img src="<?= BASE_URL ?>/img/login_background.jpg" alt="preview item">
                     </div>
                     <div class="preview-item">
@@ -103,12 +102,45 @@
 
             <!-- Right Section Start -->
             <section class="col-lg-7 right-section bg-darker">
-                <div class="title"></div>
-                <div class="rating"></div>
-                <div class="tags"></div>
-                <div class="download-btn"></div>
-                <div class="about"></div>
-                <div class="review-form"></div>
+                <div class="title">
+                    <p class="text h2" id="project_title">
+                        Flood Barrier (Flood Defense Barricade with Alert System and River Monitor)
+                    </p>
+                </div>
+                <div class="rating top-margin-sm">
+                    <p class="rating-ratio">4.9/5</p>
+                    <span class="rates-count">
+                        <i class="bi-star-fill"></i>
+                        <i class="bi-star-fill"></i>
+                        <i class="bi-star-fill"></i>
+                        <i class="bi-star-fill"></i>
+                        <i class="bi-star-half"></i>
+                    </span>
+                    <p>|</p>
+                    <p id="rate_count">67</p>
+                    <p>people</p>
+                </div>
+                <div class="tags">
+                    <p>Categories:</p>
+                    <p class="tag inline">IoT</p>
+                    <p class="tag inline">Disaster Management</p>
+                    <p class="tag inline">Engineering</p>
+                </div>
+                <div class="download-btn top-margin-sm">
+                    <a href="#" class="btn btn-primary"><p class="h5 text-bold">Download Zip</p></a>
+                </div>
+                <div class="about top-margin-sm">
+                    <p class="h4">About</p>
+                    <div class="underline" style="width: 5rem;"></div>
+                    <p class="text-justify top-margin-sm" id="project_desc">
+                        Flood Barrier merupakan inovasi dinding pintar berbasis Internet of Things yang memanfaatkan karet sebagai penghalang meluapnya air sungai sehingga mampu menahan banjir sementara. Karet berbentuk tabung ini dilapisi kain anti bocor yang memanjang mendatar di bagian bawah karet, fungsinya agar karet tidak akan bergeser karena berat dari air sungai akan menekan kain kebawah. 
+                    </p>
+                </div>
+                <div class="review-form top-margin-lg">
+                    <p class="h4">Your Review</p>
+                    <div class="underline" style="width: 10rem;"></div>
+                    <p class="h6 text-bold top-margin-sm"><a href="#" class="btn btn-primary">Submit</a></p>
+                </div>
             </section>
             <!-- Right Section End -->
         </div>

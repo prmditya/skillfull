@@ -25,6 +25,10 @@ h5 {
   color: var(--text-color) !important;
 }
 
+h5 {
+  font-weight: bold !important;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -129,6 +133,16 @@ button {
   border-radius: 0 10px 10px 0;
 }
 
+.btn-upload i {
+  font-size: 30px;
+}
+
+.btn-upload {
+  display: block;
+  display: flex;
+  align-items: center;
+}
+
 .btn-search:hover {
   background-color: rgba(54, 57, 63, 0.7) !important;
   filter: brightness(150%);
@@ -216,6 +230,21 @@ button {
 
 /* Search */
 
+/* Upload */
+.container-upload {
+  max-width: 550px;
+}
+
+.container-upload form input,
+.container-upload form textarea {
+  background-color: var(--secondary-color) !important;
+}
+
+.container-upload form input::placeholder,
+.container-upload form textarea::placeholder {
+  color: var(--text-color);
+}
+
 /* Media Queries */
 
 /* For Laptop Only */
@@ -232,7 +261,6 @@ button {
 
 /* For Tablet Only */
 @media (max-width: 768px) {
-  
 }
 
 /* For Phone Large Only */

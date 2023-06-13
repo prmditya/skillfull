@@ -10,7 +10,7 @@
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
 
-      <!-- Content -->
+      <!-- Carousel Content -->
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="carousel-image-overlay"></div>

@@ -68,7 +68,7 @@
           <div class="card-body">
             <h5 class="card-title">Title Karya</h5>
             <p class="card-text">Some quick example text to ...</p>
-            <a href="#" class="btn btn-primary">Go to Page</a>
+            <a href="<?= BASE_URL; ?>/product/index" class="btn btn-primary">Go to Page</a>
           </div>
         </div>
       </div>

@@ -6,7 +6,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?= $data['title']; ?></title>
+  <title>Skillful | <?= $data['title']; ?></title>
+  <link rel="icon" href="<?= BASE_URL; ?>/img/head_logo.png" type="image/png">
   <base href="/">
 
   <!-- BS CSS -->

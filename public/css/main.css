@@ -67,6 +67,11 @@ button {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
+.login-wrapper input,
+.register-wrapper input {
+  background-color: var(--primary-color) !important;
+}
+
 .login-wrapper input::placeholder,
 .register-wrapper input::placeholder {
   color: var(--text-color) !important;
@@ -95,7 +100,6 @@ button {
 .form-control {
   border-radius: 5px;
   color: var(--text-color) !important;
-  background-color: var(--primary-color) !important;
   border: none;
 }
 
@@ -103,6 +107,8 @@ button {
 
 .navbar {
   background: rgba(54, 57, 63, 0.7) !important;
+  backdrop-filter: blur(5.5px);
+  border-bottom: solid 3px var(--secondary-color);
 }
 
 .input-group {
@@ -115,6 +121,7 @@ button {
 .input-group input {
   background-color: rgba(54, 57, 63, 0.7) !important;
   border-radius: 10px 0 0 10px;
+  backdrop-filter: blur(5.5px);
   border: none;
 }
 
@@ -130,6 +137,7 @@ button {
 .btn-search {
   border: none;
   background-color: rgba(54, 57, 63, 0.7) !important;
+  backdrop-filter: blur(5.5px);
   border-radius: 0 10px 10px 0;
 }
 
@@ -160,17 +168,6 @@ button {
 
 .dropdown-divider {
   background-color: var(--accent-color);
-}
-
-/* Home  */
-.home-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--primary-color);
-  z-index: -1;
 }
 
 /* Carousel */
@@ -210,9 +207,15 @@ button {
 }
 
 /* Card */
+.card-wrapper {
+  display: flex;
+  align-items: start;
+}
 .card {
-  background-color: var(--secondary-color) !important;
+  background: rgba(54, 57, 63, 0.7) !important;
+  backdrop-filter: blur(5.5px);
   border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .card:hover {
@@ -229,14 +232,21 @@ button {
 }
 
 /* Search */
+.search-wrapper {
+  display: flex;
+  align-items: start;
+}
 
 /* Upload */
 .container-upload {
+  margin-top: 2rem;
   max-width: 550px;
 }
 
 .container-upload form input,
-.container-upload form textarea {
+.container-upload form textarea,
+.container-upload form option,
+.container-upload form .multivalue-input {
   background-color: var(--secondary-color) !important;
 }
 
@@ -245,93 +255,96 @@ button {
   color: var(--text-color);
 }
 
+.container-upload form textarea {
+  resize: none;
+  height: 125px;
+}
+.upload-title {
+  font-size: 50px;
+  font-weight: 800;
+}
 /* Profile */
-.profile-name {
-  font-weight: bold;
+.profile-wrapper {
+  align-items: start;
 }
 
-.profile-wrapper {
-  padding: 1rem 11rem;
-  padding-bottom: 3rem;
-  border-radius: 16px;
-  background-color: var(--primary-color);
+.profile-wrapper h3 {
+  padding-bottom: 5px;
+  border-bottom: 2.5px solid var(--btn-primary-color);
+  width: fit-content;
+}
+
+.profile-head .profile-nums {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.profile-name {
+  display: inline-block;
+  font-weight: bold;
 }
 
 .profile-head {
   margin-bottom: 3rem;
 }
 
-img#profile_picture {
+.profile-head img {
   width: 128px;
   height: 128px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #076cb0;
+  border: 4px solid var(--btn-primary-color);
+  box-shadow: 0 0 20px 5px rgba(41, 67, 148, 0.4);
 }
 
-.large-text {
-  font-size: 2rem;
-}
-
-.p-btn-container {
+.btn-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 100%;
   margin-bottom: 4rem;
 }
 
-.p-btn {
-  width: 50%;
-  min-width: fit-content;
-  max-width: 320px;
+.btn-profile {
+  width: 100%;
 }
 
-.underline {
-  height: 3px;
-  background-color: #076cb0;
-}
-
-.project-text-underline {
-  width: 8em;
+.container-bio {
+  margin-bottom: 3rem;
 }
 
 /* Product Page */
-.product-nav {
-  width: min-content;
-  margin-bottom: 2rem;
-}
-
 .product-page-wrapper {
-  border-radius: 2rem;
-  background-color: var(--primary-color);
-  padding: 4rem;
-  padding-top: 2rem;
-  margin: 2rem;
-  margin-bottom: 4rem;
+  background-color: var(--secondary-color);
+  box-shadow: 0 0 20px 5px rgba(41, 67, 148, 0.4);
+  border-radius: 20px;
+  padding: 4rem 4rem;
+  margin-top: 3rem;
 }
 
-.product-thumbnail img{
-  height: 256px;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto;
-  border-radius: 1rem;
+.product-thumbnail img {
+  width: 468px;
+  border-radius: 15px;
 }
 
-.preview {
-  margin-top: 2rem;
+.carousel-thumbnail {
+  overflow: hidden;
 }
 
-.preview-item img {
-  height: 100px;
-  border-radius: 2%;
+.carousel-thumbnail img {
+  border-radius: 20px;
 }
 
 .reviews-wrapper {
   margin-top: 1rem;
-  border-radius: 2rem;
+  max-height: 500px;
+  border-radius: 20px;
   padding: 1.25rem;
-  background-color: #252525;
+  background-color: var(--primary-color);
+  overflow-y: scroll;
+}
+
+.reviews-wrapper::-webkit-scrollbar {
+  height: 0;
 }
 
 .review-entry {
@@ -340,10 +353,74 @@ img#profile_picture {
 
 .review-txt {
   font-size: small;
-  padding-left: 1rem;
-  padding-top: 0.5rem;
 }
 
+.reviews h4,
+.right-section h4 {
+  padding-bottom: 5px;
+  border-bottom: 2.5px solid var(--btn-primary-color);
+  width: fit-content;
+}
+
+.rating {
+  font-size: 1.25rem;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+form i {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+form .rating-input {
+  background-color: var(--primary-color) !important;
+  width: fit-content;
+}
+
+.tags-product {
+  background-color: var(--primary-color);
+  width: fit-content;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+
+.tags-product ul {
+  padding: 0;
+}
+
+.tags-product li {
+  display: inline;
+}
+.review-form textarea {
+  background-color: var(--primary-color) !important;
+  height: 150px;
+  resize: none;
+}
+/* Edit Profile */
+.container-edit {
+  margin-top: 2rem;
+  max-width: 550px;
+}
+
+.container-edit form input,
+.container-edit form textarea,
+.container-edit form option,
+.container-edit form .multivalue-input {
+  background-color: var(--secondary-color) !important;
+}
+
+.container-edit form input::placeholder,
+.container-edit form textarea::placeholder {
+  color: var(--text-color);
+}
+
+.container-edit form textarea {
+  resize: none;
+  height: 125px;
+}
+.edit-title {
+  font-size: 50px;
+  font-weight: 800;
+}
 /* Media Queries */
 
 /* For Laptop Only */
@@ -372,6 +449,25 @@ img#profile_picture {
   .container-register .register-wrapper img {
     width: 450px;
   }
+
+  .profile-head img {
+    width: 75px;
+    height: 75px;
+  }
+  .profile-head .profile-nums {
+    font-size: 18px;
+  }
+  .profile-head p {
+    font-size: 12px;
+  }
+
+  .container-bio {
+    font-size: 12px;
+  }
+
+  .btn-profile {
+    font-size: 12px;
+  }
 }
 
 /* For Phone Small Only */
@@ -387,7 +483,7 @@ img#profile_picture {
 
   .card,
   .card img {
-    width: 18rem;
+    width: 17rem;
   }
 
   .input-group {
@@ -396,5 +492,10 @@ img#profile_picture {
 
   .custom-carousel {
     height: 150px;
+  }
+
+  .profile-head img {
+    width: 60px;
+    height: 60px;
   }
 }

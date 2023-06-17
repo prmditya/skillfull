@@ -61,14 +61,34 @@
   <section>
     <h1 class="mt-3">Karya Baru</h1>
 
-    <div class="row mt-4 justify-content-center">
+    <div class="card-wrapper row mt-4">
+      <div class="col-lg-3 col-sm-4 mb-auto">
+        <div class="card bg-dark mb-3 mx-auto">
+          <img src="<?= BASE_URL; ?>/img/placeholder.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Title Karya</h5>
+            <p class="card-text">Some quick example text to ...</p>
+            <a href="<?= BASE_URL; ?>/product" class="btn btn-primary">Explore</a>
+          </div>
+        </div>
+      </div>
       <div class="col-lg-3 col-sm-4">
         <div class="card bg-dark mb-3 mx-auto">
           <img src="<?= BASE_URL; ?>/img/placeholder.jpg" class="card-img-top" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Title Karya</h5>
             <p class="card-text">Some quick example text to ...</p>
-            <a href="#" class="btn btn-primary">Go to Page</a>
+            <a href="<?= BASE_URL; ?>/product" class="btn btn-primary">Explore</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-4">
+        <div class="card bg-dark mb-3 mx-auto">
+          <img src="<?= BASE_URL; ?>/img/placeholder.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Title Karya</h5>
+            <p class="card-text">Some quick example text to ...</p>
+            <a href="<?= BASE_URL; ?>/product" class="btn btn-primary">Explore</a>
           </div>
         </div>
       </div>
@@ -78,7 +98,7 @@
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to ...</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a href="<?= BASE_URL; ?>/product" class="btn btn-primary">Explore</a>
           </div>
         </div>
       </div>
@@ -88,7 +108,7 @@
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to ...</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a href="<?= BASE_URL; ?>/product" class="btn btn-primary">Explore</a>
           </div>
         </div>
       </div>
@@ -98,7 +118,7 @@
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to ...</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a href="<?= BASE_URL; ?>/product" class="btn btn-primary">Explore</a>
           </div>
         </div>
       </div>

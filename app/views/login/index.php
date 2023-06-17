@@ -3,7 +3,7 @@
 
     <!-- Login Image -->
     <div class="login-img-wrapper mb-3">
-      <img src="<?= BASE_URL; ?>/img/logo.png"/>
+      <img src="<?= BASE_URL; ?>/img/logo.png" />
     </div>
 
     <h1 class="mb-4 text-center" style="font-weight: bold;">Welcome Back</h1>

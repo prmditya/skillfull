@@ -395,6 +395,7 @@ form .rating-input {
   height: 150px;
   resize: none;
 }
+
 /* Edit Profile */
 .container-edit {
   margin-top: 2rem;
@@ -421,6 +422,7 @@ form .rating-input {
   font-size: 50px;
   font-weight: 800;
 }
+
 /* Media Queries */
 
 /* For Laptop Only */

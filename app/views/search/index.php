@@ -2,7 +2,7 @@
   <h5 class="my-3 text-center">Displaying the result for "<?= $data["searchInput"]; ?>"</h5>
 
   <!-- Start Content -->
-  <div class="row mt-4 justify-content-center">
+  <div class="search-wrapper row mt-4">
     <div class="col-lg-3 col-sm-4">
       <div class="card bg-dark mb-3 mx-auto">
         <img src="<?= BASE_URL; ?>/img/placeholder.jpg" class="card-img-top" alt="..." />

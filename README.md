@@ -14,6 +14,10 @@ This Repository containing Skillfull website project. For database major last pr
 
 - Bootstrap v5.3
 
+## Screenshot
+
 ## Copyright
 
 - by
+  - [Thoriq Kusuma / prmditya]()
+  - [Yudhistira / yudhisreall]()

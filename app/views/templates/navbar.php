@@ -21,16 +21,16 @@
         </div>
       </form>
       <ul class="navbar-nav mb-2 mb-lg-0">
-        <a class="btn nav-item btn-nav-icon btn-upload text-start"href="<?= BASE_URL; ?>/upload">
+        <a class="btn nav-item btn-nav-icon btn-upload text-start" href="<?= BASE_URL; ?>/upload">
           <i class="bi bi-cloud-arrow-up"><span class="upload-btn"></span></i>
         </a>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img class="rounded-circle" src="<?= BASE_URL; ?>/img/default_profile.jpg" width="40" />
+          <a class="nav-link dropdown-toggle" href="<?= BASE_URL; ?>/profile" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img class="rounded-circle" src="<?= BASE_URL; ?>/img/default_profile.jpg" width="40" height="40" />
             <span class="profile-name"></span>
           </a>
           <ul class="dropdown-menu dropdown-menu-dark">
-            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="<?= BASE_URL; ?>/profile">Profile</a></li>
             <li>
               <hr class="dropdown-divider">
             </li>

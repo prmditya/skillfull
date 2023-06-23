@@ -18,5 +18,5 @@ This Repository containing Skillfull website project. For database major last pr
 
 ## Contributor
   - [Thoriq Kusuma / prmditya](https://github.com/prmditya)
-  - [Yudhistira / yudhisreall](https://github.com/yudhisreall)
+  - [Yudhistira / yudhisthereal](https://github.com/yudhisthereal)
   - [Wahyu Widihansyah (Linkedin)](https://www.linkedin.com/in/wahyu-widihansyah)

@@ -1,4 +1,6 @@
-<h1 align="center"><strong>Website Skillfull</strong> </h1>
+<img align="center" src="public/img/logo.png" width="250" />
+
+#
 
 This Repository containing Skillfull website project. For database major last project.
 
@@ -14,10 +16,7 @@ This Repository containing Skillfull website project. For database major last pr
 
 - Bootstrap v5.3
 
-## Screenshot
-
-## Copyright
-
-- by
-  - [Thoriq Kusuma / prmditya]()
-  - [Yudhistira / yudhisreall]()
+## Contributor
+  - [Thoriq Kusuma / prmditya](https://github.com/prmditya)
+  - [Yudhistira / yudhisreall](https://github.com/yudhisreall)
+  - [Wahyu Widihansyah (Linkedin)](https://www.linkedin.com/in/wahyu-widihansyah)

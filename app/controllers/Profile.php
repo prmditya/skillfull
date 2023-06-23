@@ -1,5 +1,5 @@
 <?php
-
+// require '../models/Profile_model.php';
 class Profile extends Controller
 {
   public function __construct()
@@ -28,5 +28,13 @@ class Profile extends Controller
     $this->view('profile/edit');
     $this->view('templates/footer');
     $this->view('templates/script');
+  }
+
+  public function confirmEdit() {
+    if ($this->model('User_model')->modifyProfile($_POST) > 0) {
+      Flasher::setFlash('<strong>Updated</strong> Successfully.', 'Profile', 'success');
+      header('Location:' . BASE_URL . '/profile');
+      exit;
+    }
   }
 }

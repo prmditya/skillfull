@@ -297,6 +297,16 @@ button {
   box-shadow: 0 0 20px 5px rgba(41, 67, 148, 0.4);
 }
 
+p.desc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+          line-clamp: 2;
+  -webkit-box-orient: vertical;
+ 
+}
+
 .btn-container {
   display: flex;
   justify-content: space-between;

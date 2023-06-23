@@ -30,7 +30,7 @@
             <span class="profile-name"></span>
           </a>
           <ul class="dropdown-menu dropdown-menu-dark">
-            <li><a class="dropdown-item" href="<?= BASE_URL; ?>/profile">Profile</a></li>
+            <li><a class="dropdown-item" href="<?= BASE_URL; ?>/profile/?puid=<?php echo $_SESSION['user_id'] ?>">Profile</a></li>
             <li>
               <hr class="dropdown-divider">
             </li>

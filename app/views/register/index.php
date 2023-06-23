@@ -12,8 +12,8 @@
 
     <!-- Form Input -->
     <form action=" <?= BASE_URL; ?>/register/registerUser" method="post">
-      <div class="my-3">
-        <input type="number" class="form-control" id="InputNIM" name="nim" placeholder="NIM" required>
+      <div class="mb-3">
+        <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
       </div>
       <div class="mb-3">
         <input type="password" class="form-control" id="InputPassword" name="password" placeholder="Password" required>

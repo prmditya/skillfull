@@ -11,7 +11,7 @@ class User_model
 
   public function isNimExists($nim)
   {
-    $query = "SELECT * FROM user WHERE user_nim = '$nim'";
+    $query = "SELECT * FROM profile WHERE nim = '$nim'";
     $this->db->query($query);
     $result = mysqli_affected_rows($this->db->dbHandler);
     return $result;
@@ -33,9 +33,9 @@ class User_model
 
   public function addUser($data)
   {
-    $nim = $data['nim'];
+    $email = $data['email'];
 
-    if ($this->isNimExists($nim)) {
+    if (empty($data['password'])) {
       return 0;
     }
 
@@ -43,12 +43,22 @@ class User_model
       return 0;
     }
 
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      return 0;
+    }
+
     $password = password_hash($data['password'], PASSWORD_DEFAULT);
     $uid = $this->guidv4();
 
-    $statement = "INSERT INTO user VALUES('$uid', '$nim', '', '$nim', '$password')";
+    $statement = "INSERT INTO user VALUES('$uid', '$email',  '$password');";
     $this->db->query($statement);
     $result = mysqli_affected_rows($this->db->dbHandler);
+
+    $statement2 = "INSERT INTO profile VALUES('$uid', 'N/A', 'N/A', 0, 0, '', '', 0, '');";
+    $this->db->query($statement2);
+
+    $_SESSION['reg_uid'] = $uid;
+
     return $result;
   }
 
@@ -57,14 +67,57 @@ class User_model
     $nim = $data['nim'];
     $password = trim($data['password']);
 
-    $statement = "SELECT * FROM user WHERE user_nim = '$nim'";
+    $statement = "SELECT * FROM profile WHERE nim = '$nim'";
     $result = $this->db->query($statement);
 
     if (mysqli_num_rows($result) > 0) {
+      $uid = mysqli_fetch_assoc($result)['user_id'];
+      $statement = "SELECT password FROM user WHERE user_id = '$uid'";
+      $result = $this->db->query($statement);
       $row = mysqli_fetch_assoc($result);
       $isPassValid = password_verify($password, $row['password']);
       if ($isPassValid) return 1;
     }
     return 0;
+  }
+
+  public function modifyProfile($data) {
+    $uid = "";
+    if (!isset($_SESSION['login'])) {
+      $uid = $_SESSION['reg_uid'];
+    }
+    else {
+      $uid = $_SESSION['user_id'];
+    }
+    $full_name = $data['full-name'];
+    $nickname = $data['nick-name'];
+    $major = $data['major'];
+    $address = $data['address'];
+    $bio = $data['bio'];
+    $statement = "UPDATE profile SET full_name = '$full_name' ,nickname = '$nickname' ,major_id = $major ,address = '$address' ,bio = \"".$bio."\" WHERE user_id = '$uid';";
+    $this->db->query($statement);
+
+    return mysqli_affected_rows($this->db->dbHandler);
+  }
+
+  public function setProfile($data) {
+    $uid = "";
+    if (!isset($_SESSION['login'])) {
+      $uid = $_SESSION['reg_uid'];
+    }
+    else {
+      $uid = $_SESSION['user_id'];
+    }
+    $full_name = $data['full-name'];
+    $nickname = $data['nick-name'];
+    $major = $data['major'];
+    $nim = $data['nim'];
+    $year = $data['year'];
+    $address = $data['address'];
+    $bio = $data['bio'];
+    $statement = "UPDATE profile SET nim = '$nim', year = $year,  full_name = '$full_name' ,nickname = '$nickname' ,major_id = $major ,address = '$address' ,bio = \"".$bio."\" WHERE user_id = '$uid';";
+    $this->db->query($statement);
+
+    return mysqli_affected_rows($this->db->dbHandler);
   }
 }

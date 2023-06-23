@@ -1,3 +1,37 @@
+<?php
+class Project_model {
+
+  public $db;
+  public function __construct() {
+      $this->db = new Database;
+  }
+
+  public function get_projects($uid) {
+      $query = "SELECT * FROM project WHERE author_id = '$uid'";
+      $result = $this->db->query($query);
+      $projects = array();
+      while ($row = mysqli_fetch_assoc($result)) {
+          $projects[] = $row;
+      }
+      return $projects;
+  }
+
+  public function get_latest($count) {
+      $query = "SELECT * FROM project ORDER BY date_created DESC LIMIT $count";
+      $result = $this->db->query($query);
+      $projects = array();
+      while ($row = mysqli_fetch_assoc($result)) {
+          $projects[] = $row;
+      }
+      return $projects;
+  }
+}
+
+$model = new Project_model;
+$latest_projects = $model->get_latest(8);
+
+?>
+
 <div class="container">
 
   <!-- Start Carousel -->
@@ -62,66 +96,21 @@
     <h1 class="mt-3">Karya Baru</h1>
 
     <div class="card-wrapper row mt-4">
-      <div class="col-lg-3 col-sm-4 mb-auto">
+      <?php
+      foreach ($latest_projects as $project) { ?>
+        <div class="col-lg-3 col-sm-4">
         <div class="card bg-dark mb-3 mx-auto">
           <img src="<?= BASE_URL; ?>/img/placeholder.jpg" class="card-img-top" alt="..." />
           <div class="card-body">
-            <h5 class="card-title">Title Karya</h5>
-            <p class="card-text">Some quick example text to ...</p>
-            <a href="<?= BASE_URL; ?>/product" class="btn btn-primary">Explore</a>
+            <h5 class="card-title"><?php echo $project['project_title'] ?></h5>
+            <p class="card-text"><?php echo $project['description'] ?></p>
+            <a href="<?= BASE_URL; ?>/product/?puid=<?php echo $project['author_id'] ?>&proj_id=<?php echo $project['project_id'] ?>" class="btn btn-primary">Explore</a>
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-sm-4">
-        <div class="card bg-dark mb-3 mx-auto">
-          <img src="<?= BASE_URL; ?>/img/placeholder.jpg" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Title Karya</h5>
-            <p class="card-text">Some quick example text to ...</p>
-            <a href="<?= BASE_URL; ?>/product" class="btn btn-primary">Explore</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-sm-4">
-        <div class="card bg-dark mb-3 mx-auto">
-          <img src="<?= BASE_URL; ?>/img/placeholder.jpg" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Title Karya</h5>
-            <p class="card-text">Some quick example text to ...</p>
-            <a href="<?= BASE_URL; ?>/product" class="btn btn-primary">Explore</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-sm-4">
-        <div class="card bg-dark mb-3 mx-auto">
-          <img src="<?= BASE_URL; ?>/img/placeholder.jpg" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to ...</p>
-            <a href="<?= BASE_URL; ?>/product" class="btn btn-primary">Explore</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-sm-4">
-        <div class="card bg-dark mb-3 mx-auto">
-          <img src="<?= BASE_URL; ?>/img/placeholder.jpg" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to ...</p>
-            <a href="<?= BASE_URL; ?>/product" class="btn btn-primary">Explore</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-sm-4">
-        <div class="card bg-dark mb-3 mx-auto">
-          <img src="<?= BASE_URL; ?>/img/placeholder.jpg" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to ...</p>
-            <a href="<?= BASE_URL; ?>/product" class="btn btn-primary">Explore</a>
-          </div>
-        </div>
-      </div>
+      <?php
+      }
+      ?>
     </div>
 
   </section>

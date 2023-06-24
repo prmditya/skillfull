@@ -1,8 +1,6 @@
-<img align="center" src="public/img/logo.png" width="250" />
+<p align="center"><img src="public/img/logo.png" width="300"></p>
 
-#
-
-This Repository containing Skillfull website project. For database major last project.
+This Repository containing Skillfull website project. For database major last project. You can also see the report for this project in [here.](https://docs.google.com/document/d/1kCg7WDGA6rZ0F1B1iAkrlIbLoA5Q2lD3I4xLy-yNzwA/edit?usp=sharing)
 
 ## Tech Stack
 
@@ -17,6 +15,10 @@ This Repository containing Skillfull website project. For database major last pr
 - Bootstrap v5.3
 
 ## Contributor
-  - [Thoriq Kusuma / prmditya](https://github.com/prmditya)
-  - [Yudhistira / yudhisthereal](https://github.com/yudhisthereal)
-  - [Wahyu Widihansyah (Linkedin)](https://www.linkedin.com/in/wahyu-widihansyah)
+  - [Thoriq Kusuma Paramaditya](https://github.com/prmditya) 
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="20"/>
+  - [Yudhistira](https://github.com/yudhisthereal) <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="20"/>
+  - [Wahyu Widihansyah](https://www.linkedin.com/in/wahyu-widihansyah) 
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="20"/>
+  - [Daffalino Rabani Prahmono]()
+  - [Rafi Alutfi Zulfikar]()
